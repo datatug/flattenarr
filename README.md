@@ -67,9 +67,9 @@ flattened, err = flattenarr.FlattenToValues(dataToFlatten, flatteningMapping)
 
 // Output:
 [
-  ["us", "United State", "English", "USD"},
-  ["ca", "Canada",       "English", "CAD"},
-  ["ca", "Canada",       "French",  "CAD"},
+  ["us", "United State", "English", "USD"],
+  ["ca", "Canada",       "English", "CAD"],
+  ["ca", "Canada",       "French",  "CAD"],
 ]
 
 ```
