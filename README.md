@@ -4,7 +4,7 @@ Flattens hierarchical object into a flat array of maps`interface{} => []map[stri
 
 # How it works?
 
-Imagine we have next object/JSON:
+Imagine we have next object/JSON (_pseudo-code_):
 ```javascript
 var dataToFlatten = {
   countries: {
@@ -40,7 +40,7 @@ var flatteningMapping = {
 }
 ```
 
-And the source code:
+And the source code in Go language would be:
 
 ```go
 var err error
