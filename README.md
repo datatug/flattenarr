@@ -40,21 +40,36 @@ var flatteningMapping = {
 }
 ```
 
-And the source code in Go language would be:
+## To flatten to a slice of key-values:
 
 ```go
 var err error
 var flattened []map[string]interface{}
 
-flattened, err = flattener.Flatten(dataToFlatten, flatteningMapping)
-```
+flattened, err = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping)
 
-The output would be:
-
-```json
+// Output:
 [
   {"COUNTRY_ID": "us", "COUNTRY_NAME": "United State", "LANGUAGE": "English", "CURRENCY": "USD"},
   {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "English", "CURRENCY": "CAD"},
   {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "French",  "CURRENCY": "CAD"},
 ]
+
+```
+
+## To flatten to a slice of values only:
+
+```go
+var err error
+var flattened []map[string]interface{}
+
+flattened, err = flattenarr.FlattenToValues(dataToFlatten, flatteningMapping)
+
+// Output:
+[
+  ["us", "United State", "English", "USD"},
+  ["ca", "Canada",       "English", "CAD"},
+  ["ca", "Canada",       "French",  "CAD"},
+]
+
 ```
