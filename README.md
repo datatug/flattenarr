@@ -6,7 +6,7 @@ Flattens hierarchical object into a flat array of maps`interface{} => []map[stri
 
 Imagine we have next object/JSON:
 ```
-{
+var dataToFlatten = {
   countries: {
     "us": {
       "name": "United States"
@@ -26,9 +26,9 @@ Imagine we have next object/JSON:
 
 And we need to generate a CSV file with fields: `COUNTRY_ID,COUNTRY_NAME,LANGUAGE,CURRENCY`.
 
-This can be done by defining flattening mapping like:
+This can be done by defining flattening mapping like (_pseudo-code_):
 ```
-{
+var flatteningMapping = {
   countries: {
     "$key": "COUNTRY_ID",
     "$value": {
@@ -40,7 +40,16 @@ This can be done by defining flattening mapping like:
 }
 ```
 
-And the output would be:
+And the source code:
+
+```
+var err error
+var flattened []map[string]interface{}
+
+flattened, err = flattener.Flatten(dataToFlatten, flatteningMapping)
+```
+
+The output would be:
 
 ```
 [
