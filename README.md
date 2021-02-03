@@ -33,8 +33,8 @@ var flatteningMapping = {
     $key: "COUNTRY_ID",
     $value: {
       name: "COUNTRY_NAME"
-      "languages.#": LANGUAGE,
-      "currencies.#": CURRENCY
+      "languages.#": "LANGUAGE",
+      "currencies.#": "CURRENCY"
     }
   }
 }
