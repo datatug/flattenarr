@@ -34,7 +34,8 @@ var flatteningMapping = {
     $value: {
       name: "COUNTRY_NAME"
       "languages.#": "LANGUAGE",
-      "currencies.#": "CURRENCY"
+      "currencies.#": "CURRENCY",
+      population: "POPULATION",
     }
   }
 }
@@ -50,9 +51,9 @@ flattened, err = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping)
 
 // Output:
 [
-  {"COUNTRY_ID": "us", "COUNTRY_NAME": "United State", "LANGUAGE": "English", "CURRENCY": "USD"},
-  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "English", "CURRENCY": "CAD"},
-  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "French",  "CURRENCY": "CAD"},
+  {"COUNTRY_ID": "us", "COUNTRY_NAME": "United State", "LANGUAGE": "English", "CURRENCY": "USD", POPULATION: 987654321},
+  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "English", "CURRENCY": "CAD", POPULATION: 123456789},
+  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "French",  "CURRENCY": "CAD", POPULATION: 123456789},
 ]
 
 ```
@@ -67,9 +68,9 @@ flattened, err = flattenarr.FlattenToValues(dataToFlatten, flatteningMapping)
 
 // Output:
 [
-  ["us", "United State", "English", "USD"],
-  ["ca", "Canada",       "English", "CAD"],
-  ["ca", "Canada",       "French",  "CAD"],
+  ["us", "United State", "English", "USD", 987654321],
+  ["ca", "Canada",       "English", "CAD", 123456789],
+  ["ca", "Canada",       "French",  "CAD", 123456789],
 ]
 
 ```
