@@ -12,13 +12,13 @@ var dataToFlatten = {
       name: "United States"
       languages: ["English"],
       currencies: ["USD"],
-      populatin: 987654321,
+      population: 987654321,
     },
     ca: {
       name: "Canada"
       languages: ["English", "French"]
       currencies: ["CAD"]
-      populatin: 123456789,
+      population: 123456789,
     }
   }
 }
