@@ -61,7 +61,7 @@ flattened, err = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping)
 
 ```go
 var err error
-var flattened []map[string]interface{}
+var flattened [][]nterface{}
 
 flattened, err = flattenarr.FlattenToValues(dataToFlatten, flatteningMapping)
 
