@@ -54,7 +54,7 @@ The output would be:
 ```json
 [
   {"COUNTRY_ID": "us", "COUNTRY_NAME": "United State, "LANGUAGE": "English", "CURRENCY": "USD"},
-  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada,       "LANGUAGE": "English", "CURRENCY": "CAD"},
-  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada,       "LANGUAGE": "French",  "CURRENCY": "CAD"},
+  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "English", "CURRENCY": "CAD"},
+  {"COUNTRY_ID": "ca", "COUNTRY_NAME": "Canada",       "LANGUAGE": "French",  "CURRENCY": "CAD"},
 ]
 ```
