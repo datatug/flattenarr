@@ -45,11 +45,8 @@ var outputColumnsOrder = ['COUNTRY_ID', 'COUNTRY_NAME', 'LANGUAGE', 'CURRENCY', 
 
 ## To flatten to an array of key-values:
 
-```go
-var err error
-var flattened []map[string]interface{}
-
-flattened, err = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping, outputColumnsOrder)
+```javascript
+var flattened = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping, outputColumnsOrder)
 
 // Output:
 [
@@ -64,11 +61,8 @@ flattened, err = flattenarr.FlattenToKeyValues(dataToFlatten, flatteningMapping,
 
 ## To flatten to a slice of values only:
 
-```go
-var err error
-var flattened [][]nterface{}
-
-flattened, err = flattenarr.FlattenToValuesOnly(dataToFlatten, flatteningMapping, outputColumnsOrder)
+```javascript
+var flattened = flattenarr.FlattenToValuesOnly(dataToFlatten, flatteningMapping, outputColumnsOrder)
 
 // Output:
 [
@@ -78,4 +72,12 @@ flattened, err = flattenarr.FlattenToValuesOnly(dataToFlatten, flatteningMapping
   ["ca", "Canada",       "English", "USD", 123456789],
   ["ca", "Canada",       "French",  "USD", 123456789],
 ]
+```
+
+## It also should be able to have objects as output values
+TODO an example:
+```javascript
+var input = {
+   
+}
 ```
